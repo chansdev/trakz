@@ -1,42 +1,58 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+body {
+  font-family: sans-serif;
+  background-color: #141414;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.login-box {
+  background-color: #000000;
+  color: white;
+  border: 1px solid #555;
+  padding: 30px;
+  width: 380px;
+  height: 400px;
+}
+
+.login-box h2 {
   text-align: center;
+  margin-bottom: 39px;
+  font-size: 30px;
+  color: #ffffff;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+form label {
+  display: block; /* Corrigido de 'display: box' para 'block' */
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #ffffff;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #888;
+  background-color: #1e1e1e;
+  color: #ffffff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+form input::placeholder {
+  color: #bbbbbb;
 }
 
-.card {
-  padding: 2em;
+form button {
+  width: 100%;
+  padding: 8px;
+  background-color: #bf2727;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.read-the-docs {
-  color: #888;
+form button:hover {
+  background-color: #a02020;
 }
