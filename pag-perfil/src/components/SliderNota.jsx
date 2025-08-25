@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../css/testes.css";
+import "./css/testes.css";
 
 export default function SliderNota({ min = 1, max = 6, defaultValue = 3 }) {
   const [valor, setValor] = useState(defaultValue);

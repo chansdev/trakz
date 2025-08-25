@@ -1,6 +1,8 @@
 import Perfil from "./components/Perfil";
 import MusicaFavorita from "./components/MusicaFavorita";
 import Avaliacao from "./components/Avaliacao";
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 function App() {
   const musicas = [
@@ -11,8 +13,8 @@ function App() {
   ];
 
   const avaliacoes = [
-    { titulo: "Musica Generica", texto: "Lorem ipsum dolor sit amet...", img: "./img-vector-icon-design-on-260nw-2164648583.webp" },
-    { titulo: "Musica Generica", texto: "Outro texto de avaliação...", img: "./img-vector-icon-design-on-260nw-2164648583.webp" },
+    { titulo: "Musica Generica", texto: "Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .", img: "./images.png" },
+    { titulo: "Musica Generica", texto: "Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .", img: "./images.png" },
   ];
 
   return (
@@ -27,7 +29,7 @@ function App() {
               key={i}
               titulo={m.titulo}
               autor={m.autor}
-              img="./img-vector-icon-design-on-260nw-2164648583.webp"
+              img="./images.png"
             />
           ))}
         </div>
