@@ -33,7 +33,13 @@ function App() {
           </ul>
         </nav>
       </header>
+      
       <main>
+      <Routes>
+        <Route
+            path="/"
+            element={
+              <>
         <Perfil />
 
         <section id="favoritas">
@@ -58,13 +64,13 @@ function App() {
             <Avaliacao key={i} {...a} />
           ))}
         </section>
-
+        </>
+            }/>
+          <Route path="/pagina1" element={<Pagina1/>}/>
+          <Route path="/pagina2" element={<Pagina2/>}/>
+          <Route path="/pagina3" element={<Pagina3/>}/>
+        </Routes>  
       </main>
-      <Routes>
-        <Route path="./pages/pagina1" element={<Pagina1/>}/>
-        <Route path="./pages/pagina2" element={<Pagina2/>}/>
-        <Route path="./pages/pagina3" element={<Pagina3/>}/>
-      </Routes>  
     </>);
 }
 
