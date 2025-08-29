@@ -1,11 +1,21 @@
 header {
-    display: flex;
-    width: 100%;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100vh;
+    color: white;
+    align-items: start;
+
+    a {
+        img {
+            width: 80px;
+            height: 80px;
+        }
+    }
 
     nav {   
         ul {
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr;
             width: 100%; 
             gap: 20px;      
             list-style: none;

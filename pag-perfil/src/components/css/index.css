@@ -1,3 +1,17 @@
+#fullContent {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+main {
+  max-height: 100vh;
+  overflow: scroll;
+}
+
+main::-webkit-scrollbar {
+  display: none;
+}
+
 #perfil {
   display: grid;
   grid-template-columns: 1fr;
@@ -104,6 +118,7 @@
   grid-template-columns: 1fr;
   justify-content: center;
   margin-top: 240px;
+  padding: 0px 20px;
   text-align: center;
 
   h2 {
