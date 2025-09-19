@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom'
 import Pagina1 from "./pages/Pagina1";
 import Pagina2 from "./pages/Pagina2";
 import Pagina3 from "./pages/Pagina3";
+import { useEffect, useState } from "react";
 
 
 function App() {
@@ -18,10 +19,18 @@ function App() {
     { titulo: "musica 4", autor: "autor 4" },
   ];
 
-  const avaliacoes = [
-    { titulo: "Musica Generica", texto: "Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .", img: "./images.png" },
-    { titulo: "Musica Generica", texto: "Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .Lorem .", img: "./images.png" },
-  ];
+
+  const [ avaliacoes, setAvaliacoes ] = useState([])
+
+  useEffect(() => {
+    fetch('http://localhost:3000/avaliacoes')
+    .then(response => response.json())
+    .then( avals => {
+      console.log(avals)
+      setAvaliacoes(avals)
+    })
+    .catch(error => console.error('Erro ao buscar dados:', error))
+  }, [])
 
   return (
     <div id="fullContent">
@@ -57,8 +66,8 @@ function App() {
 
           <section id="avaliacoes">
             <h2 className="titulo">Avaliações</h2>
-            {avaliacoes.map((a, i) => (
-              <Avaliacao key={i} {...a} />
+            {avaliacoes.map((a) => (
+              <Avaliacao key={a.id} {...a} />
             ))}
           </section>
           </>
